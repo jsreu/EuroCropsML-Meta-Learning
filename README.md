@@ -1,1 +1,1 @@
-# PretrainAppEO-Eurocrops-Meta-Learning
+# PretrainAppEO: Meta-Learning on EurocropsML
