@@ -1,0 +1,28 @@
+name: lint
+run_id: install_package
+env HOME: /home/joana
+env LANG: en_US.UTF-8
+env TERM: xterm-256color
+env PATH: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint/bin:/home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+env PYTHONHASHSEED: 2723376047
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONIOENCODING: utf-8
+env TOX_ENV_NAME: lint
+env TOX_WORK_DIR: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox
+env TOX_ENV_DIR: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint
+env VIRTUAL_ENV: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint
+env TOX_PACKAGE: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/.tmp/package/35/eurocropsmeta-0.1.dev19-py3-none-any.whl
+env COLUMNS: 80
+env LINES: 24
+metadata pid: 7036
+cwd: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning
+allow: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint/bin/*
+cmd: python -I -m pip install --force-reinstall --no-deps /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/.tmp/package/35/eurocropsmeta-0.1.dev19-py3-none-any.whl
+exit_code: 0
+Processing ./.tox/.tmp/package/35/eurocropsmeta-0.1.dev19-py3-none-any.whl
+Installing collected packages: eurocropsmeta
+  Attempting uninstall: eurocropsmeta
+    Found existing installation: eurocropsmeta 0.1.dev19
+    Uninstalling eurocropsmeta-0.1.dev19:
+      Successfully uninstalled eurocropsmeta-0.1.dev19
+Successfully installed eurocropsmeta-0.1.dev19

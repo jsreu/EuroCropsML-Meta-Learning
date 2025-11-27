@@ -1,0 +1,28 @@
+name: format
+run_id: commands[1]
+env HOME: /home/joana
+env LANG: en_US.UTF-8
+env TERM: xterm-256color
+env PATH: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint/bin:/home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+env PYTHONHASHSEED: 2234277001
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONIOENCODING: utf-8
+env TOX_ENV_NAME: format
+env TOX_WORK_DIR: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox
+env TOX_ENV_DIR: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint
+env VIRTUAL_ENV: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint
+env TOX_PACKAGE: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/.tmp/package/33/eurocropsmeta-0.1.dev19-py3-none-any.whl
+env COLUMNS: 153
+env LINES: 38
+metadata pid: 97928
+cwd: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning
+allow: /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/.tox/format-lint/bin/*
+cmd: black eurocropsmeta tests
+exit_code: 0
+
+standard error:
+[1mreformatted /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/tests/algorithms/test_alfa.py[0m
+[1mreformatted /home/joana/TUM/PreTrainAppEO/Code/mtl/EurocropsML-Meta-Learning/tests/models/test_positional_encoding.py[0m
+
+[1mAll done! ✨ 🍰 ✨[0m
+[34m[1m2 files [0m[1mreformatted[0m, [34m64 files [0mleft unchanged.
