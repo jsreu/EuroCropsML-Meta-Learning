@@ -1,0 +1,10 @@
+defaults:
+  - meta_base
+
+meta_dataset_config:
+  num_classes: 4
+  train_samples_per_class: 10
+  
+
+meta_config:
+  train_adaption_steps: 1

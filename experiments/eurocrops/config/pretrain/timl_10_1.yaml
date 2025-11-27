@@ -1,0 +1,10 @@
+defaults:
+  - timl_base
+
+meta_dataset_config:
+  num_classes: 10
+  train_samples_per_class: 1
+  
+
+meta_config:
+  train_adaption_steps: 1

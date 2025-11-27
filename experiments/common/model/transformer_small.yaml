@@ -1,0 +1,9 @@
+d_model: 128
+dim_fc: 264
+in_channels: 12
+pos_enc_len: 366
+location_encoding: False
+n_heads: 4
+num_layers: 1
+
+model_builder: TransformerModelBuilder

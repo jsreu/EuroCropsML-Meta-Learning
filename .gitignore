@@ -1,0 +1,44 @@
+# Whitelist .gitignore
+
+# Ignore everything by default
+*
+
+# Look in all (sub)-directories
+!*/
+
+# Allow data directory
+!data/
+
+# Ignore memory map dirs
+data/mmap
+
+# Only look for the following file endings
+!*.md
+!*.py
+!*.in
+!*.txt
+!*.toml
+!*.ini
+!*.sh
+!*.yml
+
+!Makefile
+!.flake8
+!.gitignore
+
+# Allow notebook files under notebook
+!notebooks/**/*.ipynb
+
+# Allow dataset dvc files
+!data/**/*.dvc
+
+# Allow experiment configs
+!experiments/**/*.yaml
+
+# Ignore eggs
+*.egg-info
+
+# Ignore environments
+.venv/
+venv/
+env/

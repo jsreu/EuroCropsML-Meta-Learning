@@ -1,0 +1,21 @@
+defaults:
+  - finetune_base
+
+name: "${base_name} - finetune head"
+tuning_params:
+  floats:
+    head_lr:
+      log: True
+      low: 1.0e-6
+      high: 1.0e-2
+  ints: {}
+  categoricals:
+    backbone_lr: [0]
+
+train_config:
+  head_lr: 1e-5
+  backbone_lr: 0
+  batch_size: 128
+  epochs: 200
+  patience: 5
+  stop_early: True
