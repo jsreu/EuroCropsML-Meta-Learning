@@ -1,7 +1,7 @@
 google-cloud-storage
 hydra-core
 matplotlib
-mlflow==2.2.2
+mlflow>=3.0
 optuna
 pydantic
 torch>2.0
