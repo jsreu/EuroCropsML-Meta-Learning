@@ -52,7 +52,8 @@ def test_data_item_padded() -> DataItem:
 @pytest.fixture
 def test_data_item() -> DataItem:
     data = np.ones((100, 13))
-    data = np.concatenate((data, -1 * np.ones((10, 13))), axis=0)  # padding for batching
+    # padding for batching
+    data = np.concatenate((data, -1 * np.ones((10, 13))), axis=0) # type: ignore[assignment]
     tensor_data = torch.tensor(data, dtype=torch.float)
     random_days = np.random.choice(np.arange(366), size=100, replace=False)
     sorted_days = np.sort(random_days)

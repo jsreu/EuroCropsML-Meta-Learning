@@ -3,7 +3,7 @@ import logging
 from collections.abc import Sequence
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Any
+from typing import Any, cast
 
 import matplotlib
 import mlflow
@@ -41,7 +41,7 @@ class MLFlowLogger:
 
     def get_run_name(self) -> str:
         """Get the name of the current run."""
-        return mlflow.active_run().info.run_name  # type: ignore[no-any-return]
+        return cast(str, mlflow.active_run().info.run_name)  # type: ignore[union-attr]
 
     @staticmethod
     def log(name: str, value: float | int, global_step: int | None = None) -> None:
@@ -60,7 +60,7 @@ class MLFlowLogger:
     @staticmethod
     def get_artifact_uri(artifact_path: str) -> str:
         """Get the full artifact uri for the current run and artifact path."""
-        return mlflow.get_artifact_uri(artifact_path)  # type: ignore[no-any-return]
+        return mlflow.get_artifact_uri(artifact_path)
 
     @staticmethod
     def log_artifact(artifact_path: str) -> None:
