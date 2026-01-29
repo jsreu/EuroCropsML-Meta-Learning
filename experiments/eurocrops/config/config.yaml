@@ -1,0 +1,15 @@
+defaults:
+  - model: transformer_small
+  - eurocrops
+  - split: default
+  - preprocess: default
+  - pretrain: pretrain
+  - finetune: headbackbonesame
+  - _self_
+
+base_name: "Eurocrops (${split.base_name})"
+
+hydra:
+  searchpath:
+    - file://./common
+    - pkg://eurocropsml.configs.dataset

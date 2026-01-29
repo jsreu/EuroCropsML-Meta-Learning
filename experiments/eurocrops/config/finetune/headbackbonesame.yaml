@@ -1,0 +1,20 @@
+defaults:
+  - finetune_base
+
+name: "${base_name} - finetune head&backbone same"
+key_metric: "Acc"
+tuning_params:
+  floats:
+    lr:
+      log: True
+      low: 1.0e-6
+      high: 1.0e-2
+  ints: {}
+  categoricals: {}
+
+train_config:
+  lr: 1e-5
+  batch_size: 128
+  epochs: 200
+  patience: 5
+  stop_early: True

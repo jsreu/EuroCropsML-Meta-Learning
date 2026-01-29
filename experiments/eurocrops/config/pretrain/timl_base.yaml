@@ -1,0 +1,42 @@
+name: "${base_name} - timl ${pretrain.meta_dataset_config.num_classes}-way-${pretrain.meta_dataset_config.train_samples_per_class}-shot"
+
+key_metric: "Acc"
+tuning_params:
+  floats:
+    inner_lr:
+      log: True
+      low: 1.0e-2
+      high: 1.0e+1
+    outer_lr:
+      log: True
+      low: 1.0e-4
+      high: 1.0e-1
+    encoder_lr:
+      log: True
+      low: 1.0e-4
+      high: 1.0e-1
+  ints: {}
+  categoricals:
+    total_task_batches: [20000]
+tuning_workers: 1
+tuning_trials: 36 # per worker
+tuning_sampler: "tpe" # "grid" or "random" or "tpe"
+tuning_pruning_percentile: 75 # top Xth percentile of runs kept, e.g., set 50 for median rule, or None for no pruning
+tuning_pruning_warmup_steps: 100 # counts in batches not epochs
+validate_every: 100
+
+meta_dataset_config:
+  num_test_tasks: 100
+  test_samples_per_class: 1
+
+meta_config:
+  name: "TIML"
+  encoder: True
+  inner_lr: 0.1
+  outer_lr: 0.0001
+  encoder_lr: 0.001
+  total_task_batches: 100000
+  first_order: False
+  reset_head: True
+
+  tasks_per_batch: 4

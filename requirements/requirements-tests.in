@@ -1,0 +1,10 @@
+black
+coverage[toml]>=5.3
+darglint
+isort
+mypy
+pep8-naming
+pytest
+pytest-mock
+pytest-xdist
+ruff>=0.4.8

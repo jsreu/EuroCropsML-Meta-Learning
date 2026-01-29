@@ -1,0 +1,9 @@
+key_metric: "Acc"
+
+tuning_workers: 1
+tuning_trials: 8 # per worker
+tuning_sampler: "tpe" # "grid" or "random" or "tpe"
+tuning_pruning_percentile: 75 # top Xth percentile of runs kept, e.g., set 50 for median rule, or None for no pruning
+tuning_pruning_warmup_steps: 100 # counts in batches not epochs
+validate_every: 1
+log_artifact_metrics_on_validation: False
